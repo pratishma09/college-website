@@ -11,7 +11,7 @@ const ContactForm = () => {
   const handleOnSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, PUBLIC_KEY).then(
-      (result) => {
+      () => {
         alert("Message Sent Successfully");
       },
       (error) => {
@@ -34,7 +34,7 @@ const ContactForm = () => {
               Get in Touch
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-xl text-stone-600">
-              We're here to answer your questions and help you start your journey in acupuncture
+              We&apos;re here to answer your questions and help you start your journey in acupuncture
             </p>
           </div>
         </div>
@@ -42,7 +42,7 @@ const ContactForm = () => {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="h-full pr-6">
               <p className="mt-3 mb-12 text-lg text-stone-600">
-                Our college is dedicated to providing comprehensive education in acupuncture and traditional medicine. Whether you're a prospective student or seeking treatment, we're here to assist you.
+                Our college is dedicated to providing comprehensive education in acupuncture and traditional medicine. Whether you&apos;re a prospective student or seeking treatment, we&apos;re here to assist you.
               </p>
               <ul className="mb-6 md:mb-0 space-y-6">
                 <li className="flex">

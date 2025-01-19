@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Leaf, Droplet, Sun, Wind } from 'lucide-react';
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  // const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const categories = [
     { name: "Campus", icon: <Leaf className="w-5 h-5" /> },
@@ -54,17 +54,17 @@ const Gallery = () => {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="max-w-2xl mx-auto text-base text-stone-600"
           >
-            Explore the harmony of ancient wisdom and modern education at Nepal's premier acupuncture institution.
+            Explore the harmony of ancient wisdom and modern education at Nepal&apos;s premier acupuncture institution.
           </motion.p>
         </div>
 
         <Tabs defaultValue="Campus" className="mb-8">
-          <TabsList className="flex justify-center mb-6">
+          <TabsList className="flex justify-center mb-6 bg-green-100 p-1 rounded-full">
             {categories.map((category) => (
               <TabsTrigger
                 key={category.name}
                 value={category.name}
-                className="flex items-center space-x-2 px-4 py-2"
+                className="flex items-center space-x-2 px-4 py-2 rounded-full data-[state=active]:bg-green-600 data-[state=active]:text-white transition-all duration-300"
               >
                 {category.icon}
                 <span>{category.name}</span>

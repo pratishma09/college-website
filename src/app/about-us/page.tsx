@@ -41,7 +41,7 @@ const AboutUs = () => {
               About Our College
             </span>
             <h2 className="mb-6 text-3xl font-bold text-stone-800 sm:text-4xl">
-              Nepal's First Acupuncture College: Healing Traditions, Modern Education
+              Nepal&apos;s First Acupuncture College: Healing Traditions, Modern Education
             </h2>
             <p className="mb-6 text-base text-stone-600">
               Founded in 2005, our college is the pioneer institution for acupuncture education in Nepal. We blend traditional Eastern healing wisdom with modern medical knowledge, providing a comprehensive education that prepares our students for successful careers in acupuncture and traditional medicine.

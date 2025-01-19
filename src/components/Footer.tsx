@@ -1,4 +1,5 @@
 import React from "react";
+import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,7 +12,7 @@ const Footer = () => {
           <div className="mb-6 w-full lg:w-1/4">
             <h3 className="text-lg font-bold mb-4">Rural Health Education</h3>
             <p className="text-sm text-gray-300">
-              Nepal's first acupuncture college, located in Jorpati, Kathmandu.
+              Nepal&apos;s first acupuncture college, located in Jorpati, Kathmandu.
             </p>
           </div>
 
@@ -40,23 +41,34 @@ const Footer = () => {
           </div>
 
           {/* Social Media Links */}
+          {/* Social Media Links */}
           <div className="w-full lg:w-1/4">
             <h4 className="text-lg font-bold mb-4">Follow Us</h4>
             <div className="flex space-x-4">
-              {[
-                { href: "#", icon: "facebook-f" },
-                { href: "#", icon: "twitter" },
-                { href: "#", icon: "instagram" },
-                { href: "#", icon: "linkedin-in" },
-              ].map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  className="p-2 rounded-full bg-green-800 hover:bg-green-700 transition duration-300"
-                >
-                  <i className={`fas fa-${social.icon}`}></i>
-                </a>
-              ))}
+              <a
+                href="#"
+                className="p-2 rounded-full bg-green-800 hover:bg-green-700 transition duration-300"
+              >
+                <Facebook className="text-white" size={24} />
+              </a>
+              <a
+                href="#"
+                className="p-2 rounded-full bg-green-800 hover:bg-green-700 transition duration-300"
+              >
+                <Twitter className="text-white" size={24} />
+              </a>
+              <a
+                href="#"
+                className="p-2 rounded-full bg-green-800 hover:bg-green-700 transition duration-300"
+              >
+                <Instagram className="text-white" size={24} />
+              </a>
+              <a
+                href="#"
+                className="p-2 rounded-full bg-green-800 hover:bg-green-700 transition duration-300"
+              >
+                <Linkedin className="text-white" size={24} />
+              </a>
             </div>
           </div>
         </div>

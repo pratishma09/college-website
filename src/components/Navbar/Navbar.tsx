@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import MobileMenu from './MobileMenu'
 import Image from 'next/image'
 // import DropdownMenu from './DropDownMenu'
@@ -28,11 +28,11 @@ const navItems = [
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
+  // const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
-  const handleDropdownToggle = (itemName: string) => {
-    setActiveDropdown(prevState => prevState === itemName ? null : itemName)
-  }
+  // const handleDropdownToggle = (itemName: string) => {
+  //   // setActiveDropdown(prevState => prevState === itemName ? null : itemName)
+  // }
 
   return (
     <nav className=" bg-white shadow sticky z-20 top-0">
