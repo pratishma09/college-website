@@ -38,10 +38,10 @@ export default function Navbar() {
     <nav className=" bg-white shadow sticky z-20 top-0">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex  justify-between h-16 items-center">
-          <a href='/' className="flex items-center gap-3 font-semibold">
+          <Link href='/' className="flex items-center gap-3 font-semibold">
             <Image src="/assets/logo.jpg" alt="logo" width={50} height={50} />
             <p>RHESC</p>
-          </a> 
+          </Link> 
           <div className="hidden md:ml-6 md:flex md:space-x-8">
             {navItems.map((item) => (
               <div key={item.name} className="relative">
