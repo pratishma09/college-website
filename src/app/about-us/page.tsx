@@ -60,10 +60,10 @@ const AboutUs = () => {
               ))}
             </div>
             <a
-              href="#contact"
+              href="/contact"
               className="inline-flex items-center justify-center py-3 px-6 text-base font-semibold text-white bg-green-600 rounded-md hover:bg-green-700 transition duration-300 ease-in-out"
             >
-              Learn More About Us
+              Contact Us
             </a>
           </div>
         </div>

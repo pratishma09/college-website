@@ -36,13 +36,13 @@ export default function Navbar() {
 
   return (
     <nav className=" bg-white shadow sticky z-20 top-0">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex  justify-between h-16 items-center">
-          <div className="flex items-center gap-3 font-semibold">
+          <a href='/' className="flex items-center gap-3 font-semibold">
             <Image src="/assets/logo.jpg" alt="logo" width={50} height={50} />
             <p>RHESC</p>
-          </div> 
-          <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
+          </a> 
+          <div className="hidden md:ml-6 md:flex md:space-x-8">
             {navItems.map((item) => (
               <div key={item.name} className="relative">
                 <motion.div
@@ -78,7 +78,7 @@ export default function Navbar() {
               </div>
             ))}
           </div>
-          <div className="-mr-2 flex items-center sm:hidden">
+          <div className="-mr-2 flex items-center md:hidden">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

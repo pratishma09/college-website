@@ -25,7 +25,7 @@ export default function MobileMenu({ navItems, setIsMobileMenuOpen }: MobileMenu
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.2 }}
-      className="sm:hidden bg-white"
+      className="md:hidden bg-white"
     >
       <div className="pt-2 pb-3 space-y-1">
         {navItems.map((item) => (
