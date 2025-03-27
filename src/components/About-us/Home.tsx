@@ -17,9 +17,9 @@ export default function AboutUsDetails() {
         <div className="flex flex-col lg:flex-row justify-between items-center">
           {/* Left Section with Image */}
           <div className="lg:w-1/2 mb-8 lg:mb-0">
-            <div className="relative w-full h-80 rounded-lg overflow-hidden">
+            <div className="relative w-full h-[22rem] rounded-lg overflow-hidden">
               <Image
-                src="/college-image.jpg" // Replace with your image path
+                src="/assets/cover.jpg" // Replace with your image path
                 alt="Why Choose Us"
                 layout="fill"
                 objectFit="cover"

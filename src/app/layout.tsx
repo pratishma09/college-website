@@ -34,7 +34,7 @@ export default function RootLayout({
         />
         <meta
           name="keywords"
-          content="RHESC, Rural Health Education and Service Center, acupuncture college Nepal, Nepal acupuncture education, acupuncture training Nepal, first acupuncture college Nepal"
+          content="RHESC, Rural Health Education and Service Center, acupuncture college Nepal, Nepal acupuncture education, acupuncture training Nepal, first acupuncture college Nepal,acupuncture college, rural health"
         />
         <meta name="author" content="RHESC" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

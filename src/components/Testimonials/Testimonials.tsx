@@ -2,25 +2,25 @@ import TestimonialCard from './TestimonialCard'
 
 const testimonials = [
   {
-    quote: "Studying acupuncture at Nepal's first acupuncture college was a life-changing experience. The knowledge and skills I gained have allowed me to help so many people in my community.",
-    author: "Aarav Sharma",
-    graduationYear: "2020",
-    specialty: "Pain Management Specialist",
+    quote: "The Rural Health Education and Service Center has been instrumental in my journey, providing hands-on training and a holistic approach to healing. This experience has empowered me to confidently apply acupuncture, acupressure, and moxibustion to make a positive impact in alternative healthcare.",
+    author: "Smriti Upreti",
+    graduationYear: "",
+    specialty: "Third Year",
     avatar: "/placeholder.svg?height=64&width=64"
   },
   {
-    quote: "The holistic approach to healing that I learned at this college has transformed my practice. I'm grateful for the comprehensive education in both traditional and modern techniques.",
-    author: "Sita Gurung",
-    graduationYear: "2019",
-    specialty: "Women's Health Expert",
-    avatar: "/placeholder.svg?height=64&width=64"
+    quote: "Choosing this path was a defining moment, and I’m grateful to have found this college. The experienced faculty, hands-on training, and supportive community have deepened my understanding of Traditional Chinese Medicine. My education at the Rural Health Education and Service Center is equipping me with the skills and confidence to make a meaningful impact in this field.",
+    author: "Bikrant Maharjan",
+    graduationYear: "",
+    specialty: "Second Year",
+    avatar: "/assets/testimonial/second.jpg"
   },
   {
-    quote: "As a graduate, I feel well-prepared to address a wide range of health issues. The college's emphasis on practical experience alongside theory was invaluable.",
-    author: "Bijay Thapa",
-    graduationYear: "2021",
-    specialty: "Sports Injury Therapist",
-    avatar: "/placeholder.svg?height=64&width=64"
+    quote: "Studying at the Rural Health Education and Service Center has been an incredible journey of growth. The supportive teachers and hands-on training have built my confidence in applying acupuncture, acupressure, and moxibustion skills. This holistic approach to healing aligns with my passion for natural, non-invasive care. ",
+    author: "Tsering Tiki Gurung",
+    graduationYear: "",
+    specialty: "First Year",
+    avatar: "/assets/testimonial/first.jpg"
   }
 ]
 
@@ -29,7 +29,7 @@ export default function TestimonialsSection() {
     <section className="py-16 bg-stone-100">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center text-stone-800 mb-12">
-          Voices of Our Graduates
+          Voices of Our Students
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (

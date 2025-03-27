@@ -15,30 +15,7 @@ const courses = [
       "Clinical Practice and Ethics"
     ]
   },
-  {
-    title: "Advanced Certificate in Herbal Medicine",
-    duration: "1 Year",
-    schedule: "Part-time",
-    description: "Deepen your knowledge of herbal remedies and their integration with acupuncture.",
-    modules: [
-      "Principles of Herbal Medicine",
-      "Herbal Formulas and Preparations",
-      "Clinical Applications of Herbs",
-      "Safety and Drug Interactions"
-    ]
-  },
-  {
-    title: "Master's in Acupuncture and Oriental Medicine",
-    duration: "3 Years",
-    schedule: "Full-time",
-    description: "An advanced program for those seeking to become leaders in the field of Oriental medicine.",
-    modules: [
-      "Advanced Acupuncture Techniques",
-      "Research Methods in Oriental Medicine",
-      "Integrative Medicine Approaches",
-      "Clinical Specializations"
-    ]
-  }
+  
 ];
 
 const CourseCurriculum = () => {
@@ -71,11 +48,11 @@ const CourseCurriculum = () => {
           </div>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        
           {courses.map((course, index) => (
             <CourseCard key={index} {...course} />
           ))}
-        </div>
+
 
         
 

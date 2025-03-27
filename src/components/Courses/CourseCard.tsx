@@ -31,11 +31,6 @@ return(
           ))}
         </ul>
       </div>
-      <div className="px-6 py-4 bg-green-50">
-        <a href="#" className="text-green-600 font-semibold hover:text-green-700 transition duration-300 ease-in-out flex items-center">
-          Learn More
-          <ChevronRight className="w-5 h-5 ml-1" />
-        </a>
-      </div>
+      
     </div>
   )}

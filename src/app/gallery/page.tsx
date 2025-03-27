@@ -1,31 +1,31 @@
 'use client'
 
 import React from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { motion } from "framer-motion";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Leaf, Droplet, Sun, Wind } from 'lucide-react';
+import { Droplet, Sun } from 'lucide-react';
 
 const Gallery = () => {
   // const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const categories = [
-    { name: "Campus", icon: <Leaf className="w-5 h-5" /> },
     { name: "Students", icon: <Droplet className="w-5 h-5" /> },
-    { name: "Techniques", icon: <Sun className="w-5 h-5" /> },
-    { name: "Herbs", icon: <Wind className="w-5 h-5" /> },
+    { name: "Extra Curriculars", icon: <Sun className="w-5 h-5" /> },
   ];
 
   const images = [
-    { src: "/placeholder.svg?height=300&width=400", alt: "College building", category: "Campus" },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Students practicing acupuncture", category: "Students" },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Acupuncture needles", category: "Techniques" },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Traditional medicine herbs", category: "Herbs" },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Meditation garden", category: "Campus" },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Student clinic", category: "Students" },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Cupping therapy", category: "Techniques" },
-    { src: "/placeholder.svg?height=300&width=400", alt: "Herbal dispensary", category: "Herbs" },
+    { src: "/assets/gallery/1.jpg", alt: "Students practicing acupuncture", category: "Students" },
+    { src: "assets/gallery/2.jpg", alt: "Acupuncture needles", category: "Techniques" },
+    { src: "/assets/gallery/3.jpg", alt: "Traditional medicine herbs", category: "Herbs" },
+    { src: "/assets/gallery/4.jpg", alt: "Meditation garden", category: "Students" },
+    { src: "/assets/gallery/5.jpg", alt: "Student clinic", category: "Students" },
+    { src: "/assets/gallery/6.jpg", alt: "Cupping therapy", category: "Extra Curriculars" },
+    { src: "/assets/gallery/7.jpg", alt: "Cupping therapy", category: "Students" },
+    { src: "/assets/gallery/8.jpg", alt: "Cupping therapy", category: "Extra Curriculars" },
+    { src: "/assets/gallery/9.jpg", alt: "Cupping therapy", category: "Students" },
+    { src: "/assets/gallery/10.jpg", alt: "Cupping therapy", category: "Students" },
   ];
 
   return (
@@ -58,7 +58,7 @@ const Gallery = () => {
           </motion.p>
         </div>
 
-        <Tabs defaultValue="Campus" className="mb-8">
+        <Tabs defaultValue="Students" className="mb-8">
           <TabsList className="flex justify-center mb-6 bg-green-100 p-1 rounded-full">
             {categories.map((category) => (
               <TabsTrigger
@@ -73,7 +73,7 @@ const Gallery = () => {
           </TabsList>
           {categories.map((category) => (
             <TabsContent key={category.name} value={category.name}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              <div className="flex flex-wrap justify-center gap-6">
                 {images
                   .filter((image) => image.category === category.name)
                   .map((image, index) => (
@@ -87,27 +87,22 @@ const Gallery = () => {
                       <Dialog>
                         <DialogTrigger asChild>
                           <div className="cursor-pointer">
-                            <Image
+                            <img
                               src={image.src || "/placeholder.svg"}
                               alt={image.alt}
-                              width={400}
-                              height={300}
-                              className="w-full h-auto transition-transform duration-300 ease-in-out group-hover:scale-110"
+                              className="h-60 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
                             />
-                            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                              <p className="text-white text-lg font-semibold">{image.alt}</p>
-                            </div>
+                            
                           </div>
                         </DialogTrigger>
                         <DialogContent className="max-w-3xl">
-                          <Image
-                            src={image.src || "/placeholder.svg"}
-                            alt={image.alt}
-                            width={800}
-                            height={600}
-                            className="w-full h-auto"
-                          />
-                          <p className="mt-2 text-center text-lg font-semibold">{image.alt}</p>
+                        <img
+                              src={image.src || "/placeholder.svg"}
+                              alt={image.alt}
+                              className="h-60 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+                            />
+                            
+                          
                         </DialogContent>
                       </Dialog>
                     </motion.div>
@@ -116,20 +111,6 @@ const Gallery = () => {
             </TabsContent>
           ))}
         </Tabs>
-
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-12 text-center"
-        >
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center py-3 px-6 text-base font-semibold text-white bg-green-600 rounded-md hover:bg-green-700 transition duration-300 ease-in-out shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-          >
-            Experience Our Campus in Person
-          </a>
-        </motion.div> */}
       </div>
     </section>
   );

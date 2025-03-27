@@ -47,7 +47,7 @@ export default function TestimonialCard({ quote, author, graduationYear, special
         <div className="ml-4">
           <div className="font-bold text-lg">{author}</div>
           <div className="text-sm text-stone-600">
-            Class of {graduationYear}
+            {graduationYear}
           </div>
           <div className="text-sm text-green-700 mt-1">
             {specialty}

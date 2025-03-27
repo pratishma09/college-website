@@ -1,5 +1,5 @@
 import React from "react";
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
+// import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -35,23 +35,23 @@ const Footer = () => {
             <h4 className="text-lg font-bold mb-4">Contact Us</h4>
             <ul className="text-sm">
               <li className="mb-2">Jorpati, Kathmandu, Nepal</li>
-              <li className="mb-2">Phone: +977-123-456789</li>
+              <li className="mb-2">Phone: 01-4912657</li>
               <li className="mb-2">Email: info@rhe.edu.np</li>
             </ul>
           </div>
 
           {/* Social Media Links */}
           {/* Social Media Links */}
-          <div className="w-full lg:w-1/4">
-            <h4 className="text-lg font-bold mb-4">Follow Us</h4>
-            <div className="flex space-x-4">
+          {/* <div className="w-full flex flex-wrap items-center justify-center gap-10 lg:w-1/4">
+            <h4 className="text-lg font-bold">Follow Us:</h4>
+            <div className="">
               <a
-                href="#"
+                href="https://www.facebook.com/p/Rural-Health-Education-and-Service-Center-100083814597229/"
                 className="p-2 rounded-full bg-green-800 hover:bg-green-700 transition duration-300"
               >
                 <Facebook className="text-white" size={24} />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="p-2 rounded-full bg-green-800 hover:bg-green-700 transition duration-300"
               >
@@ -70,7 +70,7 @@ const Footer = () => {
                 <Linkedin className="text-white" size={24} />
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

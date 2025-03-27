@@ -10,7 +10,7 @@ const AboutUs = () => {
             <div className="flex flex-wrap items-center justify-center lg:justify-start">
               <div className="w-full sm:w-1/2 px-2 mb-4 sm:mb-0">
                 <Image
-                  src="/placeholder.svg?height=400&width=300"
+                  src="/assets/gallery/10.jpg"
                   alt="Students practicing acupuncture"
                   width={300}
                   height={400}
@@ -19,14 +19,14 @@ const AboutUs = () => {
               </div>
               <div className="w-full sm:w-1/2 px-2">
                 <Image
-                  src="/placeholder.svg?height=300&width=300"
+                  src="/assets/gallery/5.jpg"
                   alt="Acupuncture needles"
                   width={300}
                   height={300}
                   className="rounded-lg shadow-lg mb-4"
                 />
                 <Image
-                  src="/placeholder.svg?height=200&width=300"
+                  src="/assets/gallery/9.jpg"
                   alt="College building"
                   width={300}
                   height={200}
