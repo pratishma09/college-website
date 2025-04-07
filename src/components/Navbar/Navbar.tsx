@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <Link href='/' className="flex items-center gap-3 font-semibold">
             <Image src="/assets/logo.jpg" alt="logo" width={50} height={50} />
-            <p>RHESC</p>
+            
           </Link> 
           <div className="hidden md:ml-6 md:flex md:space-x-8">
             {navItems.map((item) => (

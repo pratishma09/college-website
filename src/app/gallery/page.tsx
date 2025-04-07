@@ -1,9 +1,9 @@
 'use client'
 
 import React from "react";
-// import Image from "next/image";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+// import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Droplet, Sun } from 'lucide-react';
 
@@ -84,27 +84,16 @@ const Gallery = () => {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className="relative overflow-hidden rounded-lg shadow-lg group"
                     >
-                      <Dialog>
-                        <DialogTrigger asChild>
+                      
                           <div className="cursor-pointer">
-                            <img
+                            <Image height={60} width={300}
                               src={image.src || "/placeholder.svg"}
                               alt={image.alt}
-                              className="h-60 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+                              className="h-60 object-cover object-center transition-transform duration-300 ease-in-out group-hover:scale-110"
                             />
                             
                           </div>
-                        </DialogTrigger>
-                        <DialogContent className="max-w-3xl">
-                        <img
-                              src={image.src || "/placeholder.svg"}
-                              alt={image.alt}
-                              className="h-60 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
-                            />
-                            
-                          
-                        </DialogContent>
-                      </Dialog>
+                        
                     </motion.div>
                   ))}
               </div>

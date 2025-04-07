@@ -44,7 +44,7 @@ const AboutUs = () => {
               Nepal&apos;s First Acupuncture College: Healing Traditions, Modern Education
             </h2>
             <p className="mb-6 text-base text-stone-600">
-              Founded in 2005, our college is the pioneer institution for acupuncture education in Nepal. We blend traditional Eastern healing wisdom with modern medical knowledge, providing a comprehensive education that prepares our students for successful careers in acupuncture and traditional medicine.
+              Founded in 2012, our college is the pioneer institution for acupuncture education in Nepal. We blend traditional Eastern healing wisdom with modern medical knowledge, providing a comprehensive education that prepares our students for successful careers in acupuncture and traditional medicine.
             </p>
             <p className="mb-8 text-base text-stone-600">
               Our state-of-the-art facilities, experienced faculty, and hands-on clinical training ensure that our graduates are well-equipped to make a positive impact on the health and well-being of their communities.

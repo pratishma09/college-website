@@ -1,10 +1,11 @@
 "use client"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Quote } from "lucide-react"
+import { Card } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Quote, Phone, User } from "lucide-react"
 
+// Updated team members data with teaching year information
 const teamMembers = [
   {
     name: "Dr. Manju Dahal",
@@ -12,44 +13,55 @@ const teamMembers = [
     image: "/assets/team/principal.jpg",
     testimonial:
       "Acupuncture is one of the alternative treatments developed by Chinese medicine. Its popularity is increasing day by day in the world. This method has made it easier to treat diseases that are not curable by modern medical methods, mainly bone and joint diseases, nerve related diseases, arthritis, paralysis, back pain, insomnia, and drug addiction. The Constitution of Nepal has also acknowledged alternative medicine and it has been incorporated in the National Health Policy of the country. I have also been involved in this profession for the past 30 years and have experienced its effectiveness. With an objective of developing skill based education, Acupuncture college was established by the service center in Jorpati, Dakshindhoka, Kathmandu in 2070 B.S. with an aim of promoting reasonable, employment backed education to provide solace to the problem of brain drain in a developing country like ours. Since it is also necessary to spread public awareness about this method of treatment, I believe that this published material will be useful.",
-    department: "Administration",
-    isPrincipal: true,
+      isPrincipal: true,
   },
   {
-    name: "Prof. Priya Adhikari",
+    name: "Dr. Radhye Shyam Shilpakar",
+    role: "MD, Acupuncture",
+    image: "/assets/team/radhye.jpg",
+    testimonial:
+      "Acupuncture is a traditional Chinese medicine (TCM) practice that involves inserting thin needles into specific points on the body to promote healing and balance energy flow, known as Qi (Chi). Acupuncture has gained significant recognition in Nepal, blending traditional Chinese medicine with local healthcare practices. As an acupuncture educator, I have witnessed  the profound impact this ancient healing practice has on individuals and communities. Teaching at Rural Health Education and Service Center  has been a deeply fulfilling experience, as I get to mentor passionate students who are eager to transform lives through holistic medicine.The curriculum taught at Rural Health Education and Service Center  blends traditional wisdom with modern clinical applications, ensuring that students graduate with both theoretical knowledge and hands-on expertise. Seeing my students develop their skills and go on to help people heal naturally is the greatest reward. If you’re looking for a career in acupuncture, Rural Health Education and Service Center provides the best foundation to start your journey!",
+    teachingYear: "Year 2 ",
+    hasTestimonial:false,
+    phone: "+977 9841693700",
+  },
+  {
+    name: "Dr. Kashi Khatiwada",
     role: "Head of Acupuncture Studies",
-    image: "/placeholder.svg?height=400&width=400",
-    department: "Faculty",
+    teachingYear: "Year 2 & 3 ",
+    phone: "+977 9860347056",
+    
   },
   {
-    name: "Dr. Rajesh Gurung",
-    role: "Clinical Director",
-    image: "/placeholder.svg?height=400&width=400",
-    department: "Clinical Staff",
+    name: "Dr. Jhularam Adhikari",
+    role: "Head of Acupuncture Studies",
+    teachingYear: "Year 2",
+    phone: "+977 9841226735",
   },
   {
-    name: "Ms. Sita Basnet",
-    role: "Student Affairs Coordinator",
-    image: "/placeholder.svg?height=400&width=400",
-    department: "Administration",
+    name: "Dr. Varun Upadhaya",
+    role: "Head of Acupuncture Studies",
+    teachingYear: "Year 2 & 3",
+    phone: "+977 9808453315",
   },
   {
-    name: "Dr. Anup Thapa",
-    role: "Research Head",
-    image: "/placeholder.svg?height=400&width=400",
-    department: "Faculty",
+    name: "Dr. Suraj Karanjit",
+    role: "Head of Acupuncture Studies",
+    teachingYear: "Year 2",
+    phone: "+977 9866473457",
   },
   {
-    name: "Nurse Kamala Magar",
-    role: "Clinical Instructor",
-    image: "/placeholder.svg?height=400&width=400",
-    department: "Clinical Staff",
+    name: "Dr. Sharad Gajurel",
+    role: "Head of Acupuncture Studies",
+    teachingYear: "Year 3",
+    phone: "+977 9841693700",
   },
 ]
 
 const OurTeam = () => {
   const principal = teamMembers.find((member) => member.isPrincipal)
-  const staff = teamMembers.filter((member) => !member.isPrincipal)
+  const featuredStaff = teamMembers.find((member) => member.hasTestimonial)
+  const regularFaculty = teamMembers.filter((member) => !member.isPrincipal && !member.hasTestimonial)
 
   return (
     <section className="overflow-hidden py-16 bg-gradient-to-br from-green-50 to-stone-100">
@@ -94,7 +106,20 @@ const OurTeam = () => {
                   </div>
                   <div className="mt-6">
                     <h3 className="text-xl font-semibold text-stone-800">{principal.name}</h3>
-                    <p className="text-green-600">{principal.role}</p>
+                    <p className="text-green-600 mb-3">{principal.role}</p>
+                    <div className="flex items-center">
+                      <a
+                        href={`tel:${principal.phone}`}
+                        className="flex items-center text-stone-600 hover:text-green-600 transition-colors duration-300"
+                      >
+                        {principal.phone && (
+                          <>
+                            <Phone className="w-4 h-4 mr-2" />
+                            <span>{principal.phone}</span>
+                          </>
+                        )}
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -102,56 +127,104 @@ const OurTeam = () => {
           </motion.div>
         )}
 
-        {/* Staff Members Grid */}
+        {/* Featured Staff Member Testimonial */}
+        {featuredStaff && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mb-16"
+          >
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div className="flex flex-col md:flex-row-reverse">
+                {" "}
+                {/* Reversed layout for visual variety */}
+                <div className="md:w-1/3 relative h-64 md:h-auto">
+                  <Image
+                    src={featuredStaff.image || "/placeholder.svg"}
+                    alt={featuredStaff.name}
+                    layout="fill"
+                    objectFit="cover"
+                    className="h-full w-full"
+                  />
+                </div>
+                <div className="md:w-2/3 p-8 md:p-10">
+                  <div className="flex items-start mb-6">
+                    <Quote className="text-green-500 w-10 h-10 mr-4 flex-shrink-0" />
+                    <p className="text-stone-700 italic">{featuredStaff.testimonial}</p>
+                  </div>
+                  <div className="mt-6">
+                    <h3 className="text-xl font-semibold text-stone-800">{featuredStaff.name}</h3>
+                    <p className="text-green-600 mb-3">{featuredStaff.role}</p>
+                    <div className="flex items-center justify-between">
+                      <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200 px-3 py-1">
+                        {featuredStaff.teachingYear}
+                      </Badge>
+
+                      <a
+                        href={`tel:${featuredStaff.phone}`}
+                        className="text-stone-500 hover:text-green-600 transition-colors duration-300 text-sm flex items-center"
+                      >
+                        <Phone className="w-4 h-4 mr-1" />
+                        {featuredStaff.phone}
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+        {/* Faculty Members */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <h3 className="text-2xl font-semibold text-stone-800 text-center mb-10">Our Staff</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {staff.map((member, index) => (
-              <motion.div
-                key={member.name}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2">
-                  <CardContent className="p-0">
-                    <div className="relative h-48 overflow-hidden">
-                      <Image
-                        src={member.image || "/placeholder.svg"}
-                        alt={member.name}
-                        layout="fill"
-                        objectFit="cover"
-                        className="transition-transform duration-300 hover:scale-110"
-                      />
-                    </div>
-                    <div className="p-6 relative">
-                      <Avatar className="w-20 h-20 border-4 border-white shadow-lg absolute -top-10 left-1/2 transform -translate-x-1/2">
-                        <AvatarImage src={member.image} alt={member.name} />
-                        <AvatarFallback>
-                          {member.name
-                            .split(" ")
-                            .map((n) => n[0])
-                            .join("")}
-                        </AvatarFallback>
-                      </Avatar>
-                      <div className="mt-12 text-center">
-                        <h3 className="text-xl font-semibold text-stone-800 mb-1">{member.name}</h3>
-                        <p className="text-green-600">{member.role}</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+          <Card className="p-6 shadow-md">
+            <h3 className="text-xl font-semibold text-green-700 mb-6 pb-2 border-b border-green-100">More Faculty</h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {regularFaculty.map((member, index) => (
+                <motion.div
+                  key={member.name}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
+                  className="flex items-center p-4 rounded-lg bg-white shadow-sm hover:shadow transition-all duration-200"
+                >
+                  <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center text-green-700 mr-4 flex-shrink-0">
+                    <User className="w-5 h-5" />
+                  </div>
+
+                  <div className="flex-grow">
+                    <h4 className="font-medium text-stone-800">{member.name}</h4>
+                    <p className="text-sm text-stone-600">Teaching Staff</p>
+                  </div>
+
+                  <div className="flex flex-col items-end gap-2">
+                    <Badge variant="outline" className="bg-green-50 text-green-700 border-green-200 px-3 py-1">
+                      {member.teachingYear}
+                    </Badge>
+
+                    <a
+                      href={`tel:${member.phone}`}
+                      className="text-stone-500 hover:text-green-600 transition-colors duration-300 text-sm flex items-center"
+                    >
+                      <Phone className="w-4 h-4 mr-1" />
+                      {member.phone}
+                    </a>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </Card>
         </motion.div>
       </div>
     </section>
   )
 }
 
-export default OurTeam;
+export default OurTeam
+

@@ -36,7 +36,7 @@ const Footer = () => {
             <ul className="text-sm">
               <li className="mb-2">Jorpati, Kathmandu, Nepal</li>
               <li className="mb-2">Phone: 01-4912657</li>
-              <li className="mb-2">Email: info@rhe.edu.np</li>
+              <li className="mb-2">Email: rhescnepal@gmail.com</li>
             </ul>
           </div>
 

@@ -56,8 +56,8 @@ const ContactForm = () => {
                     <h3 className="mb-2 text-lg font-medium leading-6 text-stone-800">
                       Our Address
                     </h3>
-                    <p className="text-stone-600">123 Healing Street, Kathmandu</p>
-                    <p className="text-stone-600">Nepal</p>
+                    <p className="text-stone-600">Dakshindhoka-7, Gokarneshwor</p>
+                    <p className="text-stone-600">Kathmandu, Nepal</p>
                   </div>
                 </li>
                 <li className="flex">
@@ -70,8 +70,8 @@ const ContactForm = () => {
                     <h3 className="mb-2 text-lg font-medium leading-6 text-stone-800">
                       Contact
                     </h3>
-                    <p className="text-stone-600">Phone: +977 1234567890</p>
-                    <p className="text-stone-600">Email: info@nepalacupuncture.edu</p>
+                    <p className="text-stone-600">Phone: +01-4912657</p>
+                    <p className="text-stone-600">Email: rhescnepal@gmail.com</p>
                   </div>
                 </li>
                 <li className="flex">
@@ -84,8 +84,8 @@ const ContactForm = () => {
                     <h3 className="mb-2 text-lg font-medium leading-6 text-stone-800">
                       Working hours
                     </h3>
-                    <p className="text-stone-600">Monday - Friday: 09:00 - 17:00</p>
-                    <p className="text-stone-600">Saturday: 09:00 - 13:00</p>
+                    <p className="text-stone-600"></p>
+                    <p className="text-stone-600">07:00 AM - 12:00 AM</p>
                   </div>
                 </li>
               </ul>

@@ -16,7 +16,7 @@ export default function AboutUsDetails() {
         {/* Split Layout with Image on One Side and Text on Other */}
         <div className="flex flex-col lg:flex-row justify-between items-center">
           {/* Left Section with Image */}
-          <div className="lg:w-1/2 mb-8 lg:mb-0">
+          <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
             <div className="relative w-full h-[22rem] rounded-lg overflow-hidden">
               <Image
                 src="/assets/cover.jpg" // Replace with your image path
